@@ -40,8 +40,8 @@
         }
         else
         {
-            $result = 0;
-            $input = 0;
+            $result = 0.0;
+            $input = 0.0;
         }
     ?>
     <div class="container">
@@ -57,8 +57,8 @@
             <input class="calc-button" type="submit" name="eq" value="="><br />
             <label for="result">Result:</label>
             <input type="text" id="result" name="result" class="form-control" readonly 
-                value="<?php print("$result"); ?>"" />
-            <p id="error"><?php print("$error"); ?></p>
+                value="<?php echo floatval($result); ?>" />
+            <p id="error"><?php echo($error); ?></p>
         </form>
     </div>
 </body> 
