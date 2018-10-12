@@ -1,0 +1,130 @@
+.container {
+	padding-left: 40px;
+	padding-right: 40px;
+	background-color: #ffffff;
+	color: #000000;
+	font-family: Helvetica Neue;
+	text-align: left;
+	margin: auto;
+}
+
+.strike {
+	text-decoration: line-through;
+}
+
+body {
+	background-color: #D3D3D3;
+}
+
+a {
+	color: #829ECE;
+}
+
+input {
+	width: 80%;
+	color: #000000;	
+	padding: 15px 15px;
+}
+
+table {
+	width: 100%;
+}
+
+.button {
+    background-color: rgba(31, 73, 125, 0.8);
+    border: none;
+    color: #ffffff;
+    padding: 15px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 2px;
+    cursor: pointer;
+    width: 80%;
+}
+
+#profile-pic {
+	padding-bottom: 20px;
+	height: 300px;
+	width: 300px;
+}
+
+@-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 10%;}
+}
+
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 10%;}
+}
+
+#header {
+	padding-bottom: 40px;
+    position: relative;
+}
+
+#about-me {
+	font-size: 16px;
+}
+
+#last-modified {
+	padding-top: 20px;
+}
+
+li > span {
+	font-weight: bold;
+}
+
+@media only screen and (min-width: 600px) {
+	form {
+		max-width:300px;
+	}
+	button {
+		max-width:100px;
+	}
+	.container {
+		width: 75%;
+		box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8), -12px 0 8px -4px rgba(31, 73, 125, 0.8);
+	}
+	#header {
+	    -webkit-animation-name: mymove; /* Safari 4.0 - 8.0 */
+	    -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+	    -webkit-animation-fill-mode: forwards;
+	    animation-name: mymove;
+	    animation-duration: 10s;
+		margin: auto;
+    	display: block;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.container {
+		padding-left:30px;
+		padding-right:30px;
+	}
+}
+
+#factorialDisplay {
+	overflow-wrap: break-word;
+}
+
+#mario {
+    position: absolute;
+}
+
+.calc-button {
+	margin: 5px 5px;
+}
+
+#calculator {
+	margin-bottom: 10px;
+}
+
+input {
+	margin: 10px 5px;
+}
+
+label {
+	margin-top: 10px;
+}
