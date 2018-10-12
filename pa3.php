@@ -8,33 +8,40 @@
 </head>
 <body>
     <?php
-        $input = $_POST["calculator"];
-        $result = $_POST["result"];
-        
-        if ($result == null)
+        $error = "";
+        if (isset($_POST['result']) || isset($_POST['calculator']))
         {
-            $result = 0.0;
+            $result = $_POST['result'];
+            $input = $_POST['calculator'];
+            if (!is_numeric($input))
+            {
+                $error = "Input is not a number.";
+            }
+            else if (isset($_POST['add']))
+            {
+                $result += $input;
+            }
+            else if (isset($_POST['sub']))
+            {
+                $result -= $input;
+            }
+            else if (isset($_POST['mul']))
+            {
+                $result *= $input;
+            }
+            else if (isset($_POST['div']))
+            {
+                $result /= $input;
+            }
+            else if (isset($_POST['eq']))
+            {
+                $result = $input;
+            }
         }
-
-        if (isset($_POST['add']))
+        else
         {
-            $result += $input;
-        }
-        else if (isset($_POST['sub']))
-        {
-            $result -= $input;
-        }
-        else if (isset($_POST['mul']))
-        {
-            $result *= $input;
-        }
-        else if (isset($_POST['div']))
-        {
-            $result /= $input;
-        }
-        else if (isset($_POST['eq']))
-        {
-            $result = $input;
+            $result = 0;
+            $input = 0;
         }
     ?>
     <div class="container">
@@ -51,6 +58,7 @@
             <label for="result">Result:</label>
             <input type="text" id="result" name="result" class="form-control" readonly 
                 value="<?php print("$result"); ?>"" />
+            <p id="error"><?php print("$error"); ?></p>
         </form>
     </div>
 </body> 
