@@ -47,6 +47,7 @@
     <div class="container">
         <h1>Calculator</h1>
         <form method="post">
+            <h5>Nick Gallimore</h5>
             <legend>Calculator</legend>
             <label for="calculator">Enter a number to calculate:</label>
             <input type="text" name="calculator" id="calculator" class="form-control"/>
